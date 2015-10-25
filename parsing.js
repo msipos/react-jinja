@@ -45,6 +45,8 @@ function parsing(input) {
       node.percType = 'if';
     } else if (words[0] === 'endif') {
       node.percType = 'endif';
+    } else if (words[0] === 'else') {
+      node.percType = 'else';
     } else {
       throw new ParsingException('Invalid keyword in {% %}: ' + words[0]);
     }

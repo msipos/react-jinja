@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "Jinja template language for React",
   "main": "react-jinja.js",
-  "scripts": {},
+  "scripts": {
+    "test": "nodeunit tests.js"
+  },
   "author": "Maksim Sipos",
   "license": "BSD",
   "dependencies": {},
