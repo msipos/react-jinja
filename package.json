@@ -1,0 +1,13 @@
+{
+  "name": "react-jinja",
+  "version": "0.0.1",
+  "description": "Jinja template language for React",
+  "main": "react-jinja.js",
+  "scripts": {},
+  "author": "Maksim Sipos",
+  "license": "BSD",
+  "dependencies": {},
+  "devDependencies": {
+    "nodeunit": "0.9.x"
+  }
+}
