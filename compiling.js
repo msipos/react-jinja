@@ -32,6 +32,8 @@ function compiling(input) {
       var child = nodeList[i];
 
       if (child.type === 'aggl') {
+        // TODO: Escape \, \n and \t.
+        //var outtxt = child.text.
         pushChild('"' + child.text + '"');
         continue;
       }
@@ -47,7 +49,7 @@ function compiling(input) {
         compileList(listName, child.children);
         state.output.push('}');
         if (child.elseChildren.length > 0) {
-          state.ouput.push('else {');
+          state.output.push('else {');
           compileList(listName, child.children);
           state.output.push('}');
         }
