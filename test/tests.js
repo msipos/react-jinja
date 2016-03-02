@@ -28,7 +28,7 @@ it('should compile basic.html', function() {
   assert.equal(tokens.length, 46, 'Lexed correct number of tokens.');
 
   var flatNode = parsing(tokens);
-  assert.equal(flatNode.children.length, 21, 'Parsed into a flat node with 21 children.');
+  assert.equal(flatNode.children.length, 21, 'Parsed into a flat node.');
 
   var treeNode = parsing2(flatNode);
   assert.equal(treeNode.children.length, 1, 'One node at the top.');
@@ -46,7 +46,23 @@ it('should compile basic2.html', function() {
 
   var treeNode = parsing2(flatNode);
   assert.equal(treeNode.children.length, 1, 'One node at the top.');
-  assert.equal(treeNode.children[0].element, 'div', 'It is a div.');
+  assert.equal(treeNode.children[0].element, 'div', 'It is an div.');
+});
+
+it('should compile forloops.html', function() {
+  var templateBasic = fs.readFileSync('test_templates/forloops.html').toString();
+
+  var tokens = lexing(templateBasic);
+  assert.equal(tokens.length, 22, 'Lexed correct number of tokens.');
+
+  var flatNode = parsing(tokens);
+  assert.equal(flatNode.children.length, 11, 'Parsed into a flat node.');
+  console.log(JSON.stringify(flatNode, null, 2));
+
+  var treeNode = parsing2(flatNode);
+  assert.equal(treeNode.children.length, 1, 'One node at the top.');
+  console.log(JSON.stringify(treeNode, null, 2));
+  assert.equal(treeNode.children[0].element, 'ul', 'It is an ul.');
 });
 
 it ('should compile and render basic.html', function() {
