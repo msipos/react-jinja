@@ -10,6 +10,9 @@
   "license": "BSD",
   "dependencies": {},
   "devDependencies": {
-    "nodeunit": "0.9.x"
+    "js-beautify": "^1.6.2",
+    "nodeunit": "0.9.x",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
   }
 }
