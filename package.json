@@ -4,13 +4,14 @@
   "description": "Jinja template language for React",
   "main": "react-jinja.js",
   "scripts": {
-    "test": "nodeunit tests.js"
+    "test": "mocha"
   },
   "author": "Maksim Sipos",
   "license": "BSD",
   "dependencies": {},
   "devDependencies": {
     "js-beautify": "^1.6.2",
+    "mocha": "^2.4.5",
     "nodeunit": "0.9.x",
     "react": "^0.14.7",
     "react-dom": "^0.14.7"
